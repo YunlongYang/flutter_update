@@ -1,6 +1,6 @@
 name: flutter_update
-description: A new flutter plugin project.
-version: 0.0.1
+description: To update your app to newest version.
+version: 1.0.0
 author: YunlongYang <yunlong17568@gmail.com>
 homepage: https://github.com/YunlongYang/flutter_update
 

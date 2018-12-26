@@ -30,10 +30,8 @@ public class AppInstaller {
         if (!(new File(filePath).exists())) {
             throw new FileNotFoundException(filePath + " (not exist)");
         }
-        if (Build.VERSION.SDK_INT >= 24) {
-            // 参数1 上下文, 参数2 Provider主机地址 和配置文件中保持一致 参数3 共享的文件
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             Uri apkUri = FileProvider.getUriForFile(context, getAuth(context), new File(filePath));
-            // 添加这一句表示对目标应用临时授权该Uri所代表的文件
             install.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             install.setDataAndType(apkUri, "application/vnd.android.package-archive");
         } else {
@@ -53,4 +51,3 @@ public class AppInstaller {
         return authorities;
     }
 }
-

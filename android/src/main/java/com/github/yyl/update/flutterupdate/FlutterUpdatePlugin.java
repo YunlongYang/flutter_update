@@ -28,7 +28,7 @@ public class FlutterUpdatePlugin implements MethodCallHandler {
   public void onMethodCall(MethodCall call, Result result) {
     if (call.method.equals("install")) {
       try {
-        String path = call.arguments();
+        String path = call.argument("filePath");
         AppInstaller installer = new AppInstaller(path, getContext());
         installer.install();
         result.success(null);

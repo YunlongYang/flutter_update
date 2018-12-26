@@ -21,18 +21,18 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: const Text('flutter_update example'),
         ),
         body: Column(
             children: <Widget>[
               Center(
-                child:Text('Move one apk file to /sdcard/Android/tmp/app.apk'),
+                child:Text('Move one apk file to /sdcard/Android/tmp/app.apk\nThen click Install'),
               ),
               FlatButton.icon(
                 icon: Icon(Icons.open_in_new),
                 label: Text("Install"),
                 onPressed: (){
-                  FlutterUpdate.install("/sdcard/Android/tmp/app.apk");
+                  FlutterUpdate.install("http://itunes.apple.com/lookup?id=yourid","/sdcard/Android/tmp/app.apk");
                 },
               )
             ],
