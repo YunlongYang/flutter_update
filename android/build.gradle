@@ -20,7 +20,6 @@ rootProject.allprojects {
 }
 
 apply plugin: 'com.android.library'
-
 android {
     compileSdkVersion 27
 
@@ -32,3 +31,22 @@ android {
         disable 'InvalidPackage'
     }
 }
+
+dependencies{
+    api group: 'com.android.support', name: 'support-v4', version: '27.1.1'
+}
+// if flutter.dir has been defined, use this to add dependency to flutter. This allows the android studio to provide
+// auto-complete & not show errors for flutter stuff =)
+
+if(false && new File("local.properties").exists()){
+     def props = new Properties()
+     new File("local.properties").withInputStream {
+         stream -> props.load(stream)
+     }
+     if(props.containsKey("flutter.sdk")){
+         String path = props.get("flutter.sdk")
+         dependencies {
+             implementation files(path+"/bin/cache/artifacts/engine/android-arm/flutter.jar")
+         }
+     }
+ }

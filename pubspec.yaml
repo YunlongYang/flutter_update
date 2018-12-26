@@ -1,8 +1,8 @@
 name: flutter_update
 description: A new flutter plugin project.
 version: 0.0.1
-author:
-homepage:
+author: YunlongYang <yunlong17568@gmail.com>
+homepage: https://github.com/YunlongYang/flutter_update
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"

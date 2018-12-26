@@ -1,3 +1,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.github.yyl.update.flutterupdate">
+
+  <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+  <application>
+
+      <meta-data android:name="FILE_PROVIDER_AUTHORITIES" android:value="com.github.yyl.update.flutterupdate.fpa"/>
+
+      <provider
+          android:name="android.support.v4.content.FileProvider"
+          android:authorities="com.github.yyl.update.flutterupdate.fpa"
+          android:exported="false"
+          android:grantUriPermissions="true" >
+          <!-- 元数据 -->
+          <meta-data
+              android:name="android.support.FILE_PROVIDER_PATHS"
+              android:resource="@xml/file_paths" />
+      </provider>
+  </application>
 </manifest>
