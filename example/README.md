@@ -4,7 +4,7 @@ You have to download the newest app to your device,
 then call me to install it by using the file path.
 
 ## About Android FileProvider
-- For safe,Android use FileProvider to share files between diffenrent apps.
+- For safe,Android use FileProvider to share files between different apps.
 - You can change the default FileProvider authorities by this way.
 - There are two places that you should replace. Just find all "your.auth",and replace to yours.
 ```
