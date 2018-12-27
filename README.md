@@ -19,4 +19,4 @@ For now, I want the coder download by self,for coder to make some custom tip or 
 ## Partner  Wanted
 I am good at Android,but know less about ios. If you want make it support IOS devices,
 Just email to me, or take an issue.
-(New Issue)[https://github.com/YunlongYang/flutter_update/issues/new]
+[New Issue](https://github.com/YunlongYang/flutter_update/issues/new)
