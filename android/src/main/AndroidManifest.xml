@@ -10,7 +10,7 @@
       <meta-data android:name="FILE_PROVIDER_AUTHORITIES" android:value="com.github.yyl.update.flutterupdate.fpa"/>
 
       <provider
-          android:name="android.support.v4.content.FileProvider"
+          android:name="androidx.core.content.FileProvider"
           android:authorities="com.github.yyl.update.flutterupdate.fpa"
           android:exported="false"
           android:grantUriPermissions="true" >

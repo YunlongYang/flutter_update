@@ -33,7 +33,9 @@ android {
 }
 
 dependencies{
-    api group: 'com.android.support', name: 'support-v4', version: '27.1.1'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }
 // if flutter.dir has been defined, use this to add dependency to flutter. This allows the android studio to provide
 // auto-complete & not show errors for flutter stuff =)
